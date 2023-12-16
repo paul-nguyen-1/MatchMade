@@ -6,7 +6,7 @@ import Footer from '../components/Footer/Footer';
 import { Outlet } from 'react-router-dom';
 
 function Root() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const preloadScreen = () => {
