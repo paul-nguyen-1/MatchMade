@@ -33,13 +33,11 @@
     display: flex;
     gap: 10px;
 
-    .login,
-    .signup {
+    .authentication {
       cursor: pointer;
     }
 
-    .login:hover,
-    .signup:hover {
+    .authentication:hover {
       text-decoration: underline;
       opacity: 0.85;
     }

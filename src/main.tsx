@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import ErrorPage from './static/ErrorPage.tsx';
 import Contact from './routes/Contact.tsx';
 import Home from './routes/Home.tsx';
+import Signup from './routes/Signup.tsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/contacts",
         element: <Contact />,
+      },
+      {
+        path: "/account-authentication",
+        element: <Signup />,
       },
     ],
   },

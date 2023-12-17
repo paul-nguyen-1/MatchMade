@@ -1,33 +1,21 @@
+import { Link } from 'react-router-dom'
 import logo from '../../assets/MatchMadeLogo.webp'
 import './Nav.scss'
 
 function Nav() {
     return (
         <div className='navbar'>
-            <a href="/" className='navLogo'>
+            <Link to="/" className='navLogo'>
                 <img src={logo} alt="logo" />
-            </a>
+            </Link>
             <div className='miscNavButtons'>
-                <a>
-                    <span>Find Match</span>
-                </a>
-                <a>
-                    <span>Explore</span>
-                </a>
-                <a>
-                    <span>Friends</span>
-                </a>
-                <a>
-                    <span>Support</span>
-                </a>
+                <Link to='/'>Find Match</Link>
+                <Link to='/'>Explore</Link>
+                <Link to='/'>Friends</Link>
+                <Link to='/'>Support</Link>
             </div>
             <div className='loginButtons'>
-                <a>
-                    <span className='login'>Log In</span>
-                </a>
-                <a>
-                    <span className='signup'>Sign Up</span>
-                </a>
+                <Link to='/account-authentication' className='authentication'>Login / Sign Up</Link>
             </div>
         </div>
     )
