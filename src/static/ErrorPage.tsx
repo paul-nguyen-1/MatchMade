@@ -1,7 +1,6 @@
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 export default function ErrorPage() {
-  const navigate = useNavigate();
   const location = useLocation();
   const error = location.state && location.state.error;
 
@@ -12,9 +11,7 @@ export default function ErrorPage() {
       <p>
         <i>{error ? error.statusText || error.message : "Unknown error"}</i>
       </p>
-      <a onClick={() => navigate("/")}>
-        <span>Back to home</span>
-      </a>
+      <Link to="/">Back to Home</Link>
     </div>
   );
 }

@@ -11,23 +11,17 @@ export const useAuth = () => {
         const checkSession = async () => {
             const { data: { session } } = await supabase.auth.getSession();
             setSession(session);
-            if (session) {
-                navigate('/');
-            }
+            session ? navigate('/') : null;
         };
 
         const handleAuthChange = (_event: any, session: SetStateAction<Session | null>) => {
             setSession(session);
-            if (session) {
-                navigate('/');
-            }
+            session ? navigate('/') : null;
         };
 
         const { data: { subscription } } = supabase.auth.onAuthStateChange(handleAuthChange);
         checkSession();
-        if (session) {
-            navigate('/');
-        }
+        session ? navigate('/') : null;
         return () => subscription.unsubscribe();
     }, [navigate]);
 

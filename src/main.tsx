@@ -7,6 +7,7 @@ import ErrorPage from './static/ErrorPage.tsx';
 import Contact from './routes/Contact.tsx';
 import Home from './routes/Home.tsx';
 import Signup from './routes/Signup.tsx';
+import Match from './routes/Match.tsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/contacts",
         element: <Contact />,
+      },
+      {
+        path: "/match",
+        element: <Match />,
       },
       {
         path: "/account-authentication",
