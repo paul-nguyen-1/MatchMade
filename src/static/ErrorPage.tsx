@@ -12,7 +12,7 @@ export default function ErrorPage() {
       <p>
         <i>{error ? error.statusText || error.message : "Unknown error"}</i>
       </p>
-      <a href="/" onClick={() => navigate("/")}>
+      <a onClick={() => navigate("/")}>
         <span>Back to home</span>
       </a>
     </div>
