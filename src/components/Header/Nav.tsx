@@ -11,12 +11,12 @@ function Nav() {
             <Link to="/" className='navLogo'>
                 <img src={logo} alt="logo" />
             </Link>
-            <div className='miscNavButtons'>
+           { session && <div className='miscNavButtons'>
                 <Link to='/match'>Find Match</Link>
                 <Link to='/explore'>Explore</Link>
                 <Link to='/friends'>Friends</Link>
                 <Link to='/contacts'>Support</Link>
-            </div>
+            </div>}
             <div className='loginButtons'>
                 {!session ? <Link to='/account-authentication' className='authentication'>Login / Sign Up</Link> : <Link to='/' className='authentication' onClick={handleSignOut}>Signout</Link>}
             </div>
